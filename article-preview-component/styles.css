@@ -52,25 +52,50 @@ h2 {
   color: hsl(212, 23%, 69%);
 }
 
-.share-container {
-  display: flex;
+#contributor-container {
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-left: 40px;
   margin-right: 40px;
 }
 
 .avatar {
   border-radius: 50%;
-  width: 40px;
+  width: 50px;
   margin-right: 20px;
 }
 
+.contributor {
+  color: hsl(214, 17%, 51%);
+  font-weight: 700;
+  margin: 0;
+}
+
+.date {
+  color: hsl(212, 23%, 69%);
+  margin-top: 5px;
+}
+
 #icon-share {
+  margin: auto;
   border-radius: 50%;
-  width: 40px;
+  width: 50px;
   background: hsl(210, 46%, 95%);
-  margin-right: 0;
+}
+
+#share-container {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
+}
+
+#share-container > img {
+  width: 30px;
+  margin: 10px;
 }
 
 @media screen and (min-width: 600px) {

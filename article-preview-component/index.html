@@ -20,6 +20,7 @@
     <title>Frontend Mentor | Article preview component</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" async></script>
   </head>
   <body>
     <div class="card-container">
@@ -36,7 +37,7 @@
             you make any room feel complete.
           </p>
 
-          <div class="share-container">
+          <div id="contributor-container">
             <img class="avatar" src="images/avatar-michelle.jpg" />
             <div class="info">
               <p class="contributor" alt="Picture of person">
@@ -44,7 +45,18 @@
               </p>
               <p class="date">28 Jun 2020</p>
             </div>
-            <img id="icon-share" src="images/icon-share.svg" />
+            <button onclick="showSocials()">
+              <img id="icon-contributor" src="images/icon-share.svg" />
+            </button>
+          </div>
+          <div id="share-container">
+            <p class="share-text">SHARE</p>
+            <img class="social-icon" src="images/icon-facebook.svg" />
+            <img class="social-icon" src="images/icon-twitter.svg" />
+            <img class="social-icon" src="images/icon-pinterest.svg" />
+            <button onclick="hideSocials()">
+              <img src="images/icon-share.svg" />
+            </button>
           </div>
         </div>
       </div>
