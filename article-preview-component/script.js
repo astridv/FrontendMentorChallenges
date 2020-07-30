@@ -1,5 +1,4 @@
 function showSocials() {
-  console.log("Click");
   let contributorContainer = document.getElementById("contributor-container");
   let shareContainer = document.getElementById("share-container");
   contributorContainer.style.display = "none";
