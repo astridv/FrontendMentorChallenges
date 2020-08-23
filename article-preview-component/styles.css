@@ -1,10 +1,18 @@
+/* not supported in IE */
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
 html {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
 }
 
 body {
-  background: hsl(210, 46%, 95%);
+  background: --light-grayish-blue;
 }
 
 .card-container {
@@ -41,6 +49,7 @@ body {
 .text-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 h2 {
@@ -107,7 +116,7 @@ button {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
-  background: hsl(214, 17%, 51%);
+  background: var(--very-dark-grayish-blue);
   color: hsl(210, 46%, 95%);
   border-radius: 0 0 5px 5px;
   min-width: 20px;
@@ -119,6 +128,11 @@ button {
   width: 100%;
   height: auto;
   margin: 1em;
+}
+
+.share-text {
+  letter-spacing: 5px;
+  font-weight: 500;
 }
 
 /* ====== Media Queries ====== */
@@ -140,40 +154,46 @@ button {
     font-size: 1.2em;
   }
 
-  /* ====== Styling for popup with social media icons ====== */
-  /* Popup container */
+  /* ====== Styling for modal with social media icons ====== */
+  /* Modal container */
   #share-container {
+    /* remove unecessary padding from mobile styling NOTE: not supported in IE*/
+    padding: unset;
+    padding: 10px 20px;
     display: none;
-    position: relative;
-    z-index: 1;
-    right: 0;
-  }
-
-  /* actual popup */
-  #share-container .share-content {
-    width: 160px;
-  }
-
-  #share-container .share-content::after {
-    content: "";
-    transform: rotate(45deg);
-    top: 50px;
-    width: 0;
-    height: 0;
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -15px;
     position: absolute;
+    z-index: 1;
+    bottom: 90px;
+    right: -50px;
+    height: 40px;
+    max-height: 100%;
+    border-radius: 10px;
+    max-width: 100%;
   }
 
-  #share-container img {
-    width: 10px;
-    /* ensures responsive icons */
-    height: 10px;
+  /* styling for adding upside down triangle */
+  #share-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border: 12px solid transparent;
+    border-bottom: 0;
+    border-top-color: var(--very-dark-grayish-blue);
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+
+  .share-text {
+    display: inline;
     margin: 1em;
   }
 
-  #share-container .show {
-    visibility: visible;
+  #share-container img {
+    margin: 10px;
+    width: 20px;
+    /* ensures responsive icons */
+    height: 20px;
+    align-self: center;
   }
 }
