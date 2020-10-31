@@ -123,10 +123,37 @@ article {
 }
 
 @media only screen and (min-width: 550px) {
+    
+    
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    article {
+        padding: 2rem;
+    }
+
+    .submit-button {
+       margin-top: 1.2rem;
+       font-size: 1em;
+    }
+
+    #article3 ul {
+        font-size: 1em;
+    }
+    
     main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        max-width: 800px;
+        max-width: 650px;
     }
 
     #article1 {
