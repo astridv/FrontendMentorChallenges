@@ -24,7 +24,7 @@ The designs are in JPG static format. This will mean that you'll need to use you
 The required assets are in the `/images` folder. There is also a `style-guide.md` file, which contains the information like color palette and fonts.
 
 ## Browser Compatibility
-The component has been tested in Chrome, Firefox and Firefox Developer. Note that I'm using some properties (e.g. place-items) and CSS variables that are *not* supported by IE. 
+The component has been tested in Chrome, Firefox and Firefox Developer. Note that I'm using some properties (e.g.`place-items`) and `CSS variables` that are *not* supported by IE. 
 
 ## Accessibility 
 
