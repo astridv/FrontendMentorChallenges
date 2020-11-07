@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-Check out my solution here: https://frontend-mentor-challenges-teal.vercel.app/
+This is a responsive grid component made with HTML and CSS. Check out my solution here: https://frontend-mentor-challenges-teal.vercel.app/
 
 ## The challenge
 
