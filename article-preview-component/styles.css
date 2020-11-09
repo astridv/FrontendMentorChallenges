@@ -139,10 +139,7 @@ button {
   background: var(--desaturated-dark-blue);
 }
 
-.blue-filter {
-  filter: invert(54%) sepia(16%) saturate(597%) hue-rotate(174deg)
-    brightness(88%) contrast(87%);
-}
+
 
 /* ====== Media Queries for Desktop ====== */
 
@@ -205,4 +202,5 @@ button {
     height: 20px;
     align-self: center;
   }
+
 }
