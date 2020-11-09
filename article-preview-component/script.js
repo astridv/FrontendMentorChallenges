@@ -1,18 +1,30 @@
 let shareContainer = document.getElementById("share-container");
 let contributorContainer = document.getElementById("contributor-container");
 let showSocialsButton = document.getElementById("hide-socials-button");
+let shareIcon = document.getElementById("share-icon");
 
-function showSocials() {
+
+function toggleSocials() {
+  console.log("showSocials method fired");
   if (getWidth() < 600) {
     contributorContainer.style.display = "none";
     shareContainer.style.display = "flex";
   } else {
-    showSocialsButton.style.display = "none";
-    shareContainer.style.display = "flex";
+    let displaySetting = shareContainer.style.display;
+    /* if shareContainer is not visible */
+    if (displaySetting == "none") {
+      showSocialsButton.style.display = "none";
+      shareContainer.style.display = "flex";
+    }
+    else {
+      showSocialsButton.style.display = "flex";
+      shareContainer.style.display = "none";
+    }
+    
   }
 }
 
-function hideSocials() {
+function hideSocialsOnMobile() {
   shareContainer.style.display = "none";
   contributorContainer.style.display = "flex";
 }
@@ -24,18 +36,9 @@ function getWidth() {
   if (window.innerWidth != null) xWidth = window.innerWidth;
 
   if (document.body != null) xWidth = document.body.clientWidth;
-
-  console.log(xWidth);
   return xWidth;
 }
 
-/* if window gets mobile size:
-  remove socials container 
-*/
 
-window.onclick = function (event) {
-  if (event.target == shareContainer) {
-    shareContainer.style.display = "none";
-    showSocialsButton.style.display = "inline";
-  }
-};
+
+
