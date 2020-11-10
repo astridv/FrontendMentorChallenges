@@ -15,6 +15,13 @@ body {
   background: --light-grayish-blue;
 }
 
+h2 {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  margin: 40px 30px 0 30px;
+}
+
 .card-container {
   height: 100vh;
   display: flex;
@@ -52,13 +59,6 @@ body {
   position: relative;
 }
 
-h2 {
-  font-size: 1.1em;
-  font-weight: 700;
-  color: hsl(217, 19%, 35%);
-  margin: 40px 30px 0 30px;
-}
-
 .text {
   font-size: 1em;
   font-weight: 500;
@@ -69,8 +69,9 @@ h2 {
 #contributor-container {
   display: flex;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 10px;
 }
 
@@ -98,19 +99,18 @@ button {
   border-radius: 50%;
   /* align child item to the right, similar to justify-self if that actually existed */
   margin-left: auto;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
 }
 
 #share-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin-top: 10px;
   background: var(--very-dark-grayish-blue);
   color: hsl(210, 46%, 95%);
   border-radius: 0 0 5px 5px;
@@ -118,14 +118,14 @@ button {
 }
 
 #share-container a {
-  max-width: 40px;
+  max-width: 35px;
   /* ensures responsive icons */
   width: 100%;
   height: auto;
-  margin: 0.5em;
 }
 
 .share-text {
+  margin-right: 20px;
   letter-spacing: 5px;
   font-weight: 500;
   color: var(--grayish-blue);
@@ -137,11 +137,14 @@ button {
 
 #hide-socials-button {
   background: var(--desaturated-dark-blue);
+  margin-right: 10px;
 }
 
+.share-icon-active {
+  display: none;
+}
 
-
-/* ====== Media Queries for Desktop ====== */
+/* ====== Media Query for Desktop ====== */
 
 @media screen and (min-width: 600px) {
   .card {
@@ -170,7 +173,7 @@ button {
     position: absolute;
     z-index: 1;
     bottom: 90px;
-    right: -50px;
+    right: -65px;
     height: 40px;
     max-height: 100%;
     border-radius: 10px;
@@ -202,5 +205,22 @@ button {
     height: 20px;
     align-self: center;
   }
+
+  #share-container a:hover {
+   opacity: 0.7;
+  }
+
+  .active-icon {
+    background-color: #6D7F97;
+  }
+
+  .active-icon #share-icon path {
+    fill: hsl(210, 46%, 95%);
+  }
+
+  button:hover #share-container {
+    display: block;
+  }
+
 
 }
