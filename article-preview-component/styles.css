@@ -6,47 +6,41 @@
   --very-dark-grayish-blue: hsl(217, 19%, 35%);
 }
 
-html {
+html, body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
-}
-
-body {
-  background: --light-grayish-blue;
-}
-
-h2 {
-  color: hsl(217, 19%, 35%);
-  font-size: 1.1em;
-  font-weight: 700;
-  margin: 40px 30px 0 30px;
-}
-
-.card-container {
+  background: var(--light-grayish-blue);
   align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
 }
 
+
+h2 {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 0px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
 .card {
   align-items: center;
   background: white;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 30px;
-  max-width: 800px;
-  min-width: 200px;
+  margin: 3rem;
 }
 
 .drawer-img {
   /* rounded top corners on picture */
   border-radius: 5px 5px 0 0;
-  max-height: 100%;
-  max-width: 100%;
+  height: auto;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -54,19 +48,23 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-top: 0.5rem;
 }
 
 .text {
   color: hsl(212, 23%, 69%);
   font-size: 1em;
   font-weight: 500;
-  margin: 1em 30px;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5em;
 }
 
 .contributor-container {
   align-items: center;
   display: flex;
-  margin: 10px 20px 20px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .avatar {
@@ -102,7 +100,7 @@ button {
   background: var(--very-dark-grayish-blue);
   border-radius: 0 0 5px 5px;
   color: hsl(210, 46%, 95%);
-  display: flex;
+  display: none;
   margin-top: 10px;
   min-width: 20px;
   padding: 10px 20px 15px;
@@ -135,23 +133,38 @@ button {
   display: none;
 }
 
+.share-container a:hover {
+  opacity: 0.7;
+ }
+
 /* ====== Media Query for Desktop ====== */
 
 @media screen and (min-width: 600px) {
   .card {
     flex-direction: row;
-  }
-
-  img {
-    align-self: stretch;
+    min-height: 300px;
+    max-height: 350px;
+    max-width: 700px;
+    min-width: 200px;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
+  .text-container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
   .text {
     font-size: 1.2em;
+  }
+
+  .drawer-img {
+    align-self: stretch;
+    max-width: 35%;
+    border-radius: 5px 0 0 5px;
   }
 
   /* ====== Styling for modal with social media icons ====== */
@@ -160,24 +173,25 @@ button {
     border-radius: 10px;
     bottom: 90px;
     display: none;
-    height: 40px;
+    height: 50px;
     max-height: 100%;
     max-width: 100%;
     /* remove unecessary padding from mobile styling NOTE: not supported in IE*/
     padding: unset;
     padding: 10px 20px;
     position: absolute;
-    right: -65px;
+    right: -75px;
     z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   /* styling for adding upside down triangle */
   .share-container::after {
+    content: "";
+    border: 12px solid transparent;
     border-bottom: 0;
     border-top-color: var(--very-dark-grayish-blue);
-    border: 12px solid transparent;
     bottom: 0;
-    content: "";
     left: 50%;
     margin-bottom: -12px;
     margin-left: -12px;
@@ -196,19 +210,11 @@ button {
     width: 20px;
   }
 
-  .share-container a:hover {
-   opacity: 0.7;
-  }
-
   .active-icon {
     background-color: #6D7F97;
   }
 
   .active-icon .share-icon path {
     fill: hsl(210, 46%, 95%);
-  }
-
-  button:hover .share-container {
-    display: block;
   }
 }
