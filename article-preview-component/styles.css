@@ -62,7 +62,6 @@ h2 {
   color: hsl(212, 23%, 69%);
   font-size: 1em;
   font-weight: 500;
-  margin-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5em;
 }
@@ -70,8 +69,7 @@ h2 {
 .contributor-container {
   align-items: center;
   display: flex;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 10px 20px 10px;
 }
 
 .avatar {
@@ -99,6 +97,7 @@ button {
   height: 35px;
   /* align child item to the right, similar to justify-self if that actually existed */
   margin-left: auto;
+  margin-right: 10px;
   width: 35px;
 }
 
@@ -127,6 +126,7 @@ button {
   font-weight: 500;
   letter-spacing: 5px;
   margin-right: 20px;
+  margin-left: 5px;
 }
 
 .share-icon {
@@ -135,7 +135,6 @@ button {
 
 .hide-socials-button {
   background: var(--desaturated-dark-blue);
-  margin-right: 10px;
 }
 
 .share-icon-active {
@@ -151,6 +150,7 @@ button {
 @media screen and (min-width: 600px) {
   .card {
     flex-direction: row;
+    margin: 5rem;
     min-height: 300px;
     max-height: 350px;
     max-width: 700px;
