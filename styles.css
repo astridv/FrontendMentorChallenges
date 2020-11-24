@@ -7,6 +7,10 @@ html, body {
     place-items: center center;
 }
 
+h1 {
+    color: rgb(189, 76, 95);
+}
+
 a {
     text-decoration: none;
     color: black;
