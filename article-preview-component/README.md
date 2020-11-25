@@ -19,5 +19,5 @@ The users should be able to:
 The component has been tested in Chrome, Firefox, Firefox Developer and Safari. Note that I'm using some properties (e.g.`place-items`) and `CSS variables` that are *not* supported by IE. 
 
 ## Alphabetizing CSS properties
-Something new I tried out for this challenge was to alphabetize the CSS properties. This was a pain at first, but luckily I quickly found I could set a VSC shortcut to help me out. It was pretty neat as I discovered some places where I had acciedentally set a property twice 🤦‍♀️
+Something new I tried out for this challenge was to alphabetize the CSS properties. This was a pain at first, but luckily I quickly found I could set a VSC shortcut to help me out. It was pretty neat as I discovered some places where I had accidentally set a property twice 🤦‍♀️
 
