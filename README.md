@@ -5,8 +5,11 @@ This repository contains my solutions to challenges from Frontend Mentor ✨ Wha
 
 
 ## So whatcha working on?? 👩‍💻
-I just discovered Frontend Mentor myself, and as someone who struggles coming up with nice design & wants to improve their web development skills, I think it is brilliant! 😍 I just completed my first challenge (a mobile first reponsive grid component), and now I plan to continue working on this sweet article preview component: 
+I just discovered Frontend Mentor myself, and as someone who struggles coming up with nice design & wants to improve their web development skills, I think it is brilliant! 😍 I just completed my second challenge, but stay tuned for more! See the list below for live demos of the solutions to completed challenges.
 
-![Design preview for the Article preview component coding challenge](./article-preview-component/design/mobile-design.jpg)
-![Design preview for the Article preview component coding challenge](./article-preview-component/design/mobile-active-state.jpg)
+## Completed Challenges
+- [Article Preview Component](https://av-frontendmentor-challenges.vercel.app/article-preview-component/index.html)
+- [Price Grid Component](https://av-frontendmentor-challenges.vercel.app/price-grid-component/index.html)
+
+
 
