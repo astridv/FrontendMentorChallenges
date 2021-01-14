@@ -30,32 +30,28 @@ dd {
 
 /* GLOBAL STYLES */
 
-html, body {
+body {
   background-color: var(--color-neutral-light-gray-blue);
-  display: grid;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 13px;
   font-weight: 500;
   min-height: 100vh;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 /* BLOCKS */
-
-main {
- max-width: 50%;
- margin: 2rem;
-}
-
 .card {
   border-radius: 5px;
   margin-bottom: 1.5rem;
-  max-width: 90%;
-  min-width: 300px;
   padding: 2rem;
+  max-width: 700px;
+  min-width: 150px;
 }
 
-/* ELEMENTS */
 .card__heading {
   display: flex;
   align-items: center;
