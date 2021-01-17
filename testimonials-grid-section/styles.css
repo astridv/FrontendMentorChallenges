@@ -75,6 +75,16 @@ main {
   opacity: 70%;
 }
 
+.attribution {
+  color: var(--color-primary-dark-gray-blue);
+  padding: 1.5rem;
+}
+
+.atttribution__link {
+  text-decoration: none;
+  color: var(--color-primary-moderate-violet);
+}
+
 /* MODIFIERS */
 .card--big-text {
   font-size: 1.6em;
