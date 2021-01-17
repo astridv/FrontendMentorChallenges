@@ -95,12 +95,19 @@ body {
 
 .card--gray {
   background-color: var(--color-primary-dark-gray-blue);
-  color: white;
+  color: var(--color-primary-white);
 }
 
 .card--dark-blue {
   background-color: var(--color-primary-dark-black-blue);
-  color: white;
+  color: var(--color-primary-white);
+}
+
+.card--bg-quote {
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+  background-size: 11em;
 }
 
 .card__picture--round {
