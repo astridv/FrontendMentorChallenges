@@ -4,7 +4,7 @@
 
 ## ¡Hola! 👋
 
-This is a responsive testimonial grid section made with HTML and CSS. I decided to test out BEM notation for the first time in this challenge. Obviously, it its not exactly necessary to employ BEM in such a small project, however, I found it a nice way to try it out! See more on that below if you're interested. Check out the live solution here: https://av-frontendmentor-challenges.vercel.app/testimonials-grid-section/index.html
+This is a responsive testimonial grid section made with HTML and CSS. I decided to test out BEM notation for the first time in this challenge. Obviously, it is not exactly necessary to employ BEM in such a small project, however, I found it a nice way to try it out! See more on that below if you're interested. Check out the live solution here: https://av-frontendmentor-challenges.vercel.app/testimonials-grid-section/index.html
 
 ## The challenge
 
@@ -21,11 +21,11 @@ The BEM methodology is a naming convention for classes in HTML and CSS. The purp
 Standalone components that make sense on their own and can be reused. The block name describes what is is (e.g. a button) and not what it looks like or its state (e.g. pink or small). So as my HTML consists of several cards I made the card into a block: 
 `<article class="card">`
 
-## Elements 
+### Elements 
 An element has no meaning on its own without a block, but its name also describes a purpose. The structure looks like this: `block-name__element-name`. I therefore gave my card heading the following class: 
 `class = card__heading`
 
-## Modifiers
+### Modifiers
 The modifier is used to change the appearance, behaviour or state of a block. In this design there were cards with different colour schemes, so I created a modifier for each color. E.g. `card--purple`, `card--gray` and so on. 
 
 ## Browser compability 
