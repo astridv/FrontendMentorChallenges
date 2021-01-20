@@ -28,8 +28,11 @@ An element has no meaning on its own without a block, but its name also describe
 ### Modifiers
 The modifier is used to change the appearance, behaviour or state of a block. In this design there were cards with different colour schemes, so I created a modifier for each color. E.g. `card--purple`, `card--gray` and so on. 
 
+### My thoughts on BEM
+I have to admit I found it a bit cumbersome to use at first, but a lot of that was probably just me being unfamiliar with the naming convention. It definitely made the HTML much more readable and it was nice being able to reuse different components, so I can see its potential benefit (especially in larger projects). I'm still uncertain about some aspects (*like how do I deal with the margin if I can't place it in my blocks??*), so I'll try to test it out again in a future project to get more familiar with it. 
+
 ## Browser compability 
-## Accessibility
+The solution has been tested and works in Chrome and Firefox. I'm using the Flexbox `gap property`, which is not fully supported by other browsers yet (but is in the Technology Preview of Safari!). I'm also using `CSS variables` which are not supported in IE. 
 
 
 ## The design
