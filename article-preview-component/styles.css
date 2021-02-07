@@ -101,6 +101,10 @@ button {
   width: 35px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .share-container {
   align-items: center;
   background: var(--very-dark-grayish-blue);
