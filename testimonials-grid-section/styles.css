@@ -8,22 +8,23 @@
   --color-primary-white: hsl(0, 0%, 100%);
 }
 
-body {
+body, html {
   background-color: var(--color-neutral-light-gray-blue);
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 13px;
   font-weight: 500;
   height: 100vh;
-  margin: 1.2rem;
   display: grid;
   place-items: center;
+  margin: 0 auto;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 85%;
+  max-width: 85%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* BLOCKS */
@@ -38,23 +39,29 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .card__position {
   margin: 0;
-  margin-top: 0.4rem;
+  margin-top: 0.1rem;
+  font-weight: 200;
+  font-size: 0.8rem;
   opacity: 50%;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 
 .card__review {
-  font-size: 1.2em;
   font-weight: 500;
   opacity: 70%;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .attribution {
   color: var(--color-primary-dark-gray-blue);
-  padding: 1.5rem;
 }
 
 .atttribution__link {
@@ -64,14 +71,14 @@ body {
 
 /* MODIFIERS */
 .card--big-text {
-  font-size: 1.6em;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .card--medium-text {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -99,7 +106,7 @@ body {
   background-image: url(images/bg-pattern-quotation.svg);
   background-position: 85% 0%;
   background-repeat: no-repeat;
-  background-size: 11em;
+  background-size: 9rem;
 }
 
 .card__picture--round {
@@ -111,14 +118,10 @@ body {
 @media only screen and (min-width: 1100px) {
   .wrapper {
     display: grid;
-    gap: 1.8em;
+    gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    max-width: 85%;
-  }
-
-  .card {
-    margin-bottom: 0;
+    grid-template-rows: auto auto;
+    max-width: 75%;
   }
 
   .card--grid-span-two-columns-first-row {
