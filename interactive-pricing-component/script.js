@@ -6,7 +6,7 @@ let price;
 let discount = 1;
 
 // set intial values of slider
-priceElement.innerHTML = 16;
+priceElement.innerHTML = '$16';
 pageviewsNum.innerHTML = '100K';
 
 function handleClick(cb) {
@@ -45,6 +45,7 @@ function updateViewsAndPrice(views) {
             pageviews = '1M';
             break;
     }
+    price = '$'+price;
   priceElement.innerHTML = price;
   pageviewsNum.innerHTML = pageviews;
 }
