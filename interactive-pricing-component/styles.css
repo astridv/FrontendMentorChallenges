@@ -126,6 +126,75 @@ li {
     background-color: rgba(41, 51, 86, 0.9);
 }
 
+/* TOGGLE STYLES */
+label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin-right: -2px;
+    width: 40%;
+    height: 100%;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#yearly:checked ~ .toggleWrapper {
+    border: 1px solid var(--color-primary-slider-background);
+}
+
+.toggleWrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 4em;
+    height: 2em;
+    border-radius: 2em;
+    border: 1px solid var(--color-neutral-toggle-background);
+    position: relative;
+}
+
+/* the toggle */
+.toggleSwitcher {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px; 
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.1s ease-out;
+    z-index: 2;
+}
+
+.toggleBackground {
+    display: block;
+    position: absolute;
+    background-color: var(--color-neutral-toggle-background);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 3.5em;
+    transition: all 0.1s ease-out;
+}
+
+#yearly:checked ~ .toggleSwitcher {
+    right: 0;
+    left: 50%;
+}
+
+#yearly:checked ~ .toggleBackground {
+    background-color: var(--color-primary-slider-background);
+}
+
+
+
 /* SLIDER STYLES */
 .sliderContainer {
     width: 100%;

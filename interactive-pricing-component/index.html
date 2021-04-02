@@ -25,14 +25,31 @@
       </div>
 
       <p><span id="price" class="price"></span> / month</p>
+    
+        <div class="toggle">
+          <label for="monthly">Monthly Billing</label>
+          <span class="toggleWrapper">
+            <input type="radio" name="billing" id="monthly" checked onclick="toggleDiscount(this)" value="1">
+            <input type="radio" name="billing" id="yearly" onclick="toggleDiscount(this)" value="0.75">
+            <span aria-hidden="true" class="toggleBackground"></span>
+            <span aria-hidden="true" class="toggleSwitcher"></span>
+          </span>
+          <label for="yearly">Yearly Billing</label>
+          <span class="discount">-25%</span>
+        </div>
+     
+     
 
-      <div>
-        <label>
-          <input type="checkbox" onclick=handleClick(this) name="yearlyBilling" id="billing">
-          Yearly Billing
+<!--
+<span class="test">Monthly Billing</span>
+          <span class="test2">Yearly Billing</span>
+          <input type="checkbox" onclick=applyDiscount(this) name="yearlyBilling" id="yearlyBilling">
+          <span class="toggleSwitcher"></span>
         </label>
-        <span class="discount">-25%</span>
       </div>
+      
+-->
+          
     <hr class="divider">
    
       

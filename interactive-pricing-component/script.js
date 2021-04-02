@@ -9,8 +9,8 @@ let discount = 1;
 priceElement.innerHTML = '$16';
 pageviewsNum.innerHTML = '100K';
 
-function handleClick(cb) {
-    discount = (cb.checked) ? 0.75 : 1;
+function toggleDiscount(radioBtn) {
+    discount = radioBtn.value;
     updateViewsAndPrice(slider.value);
 }
 
