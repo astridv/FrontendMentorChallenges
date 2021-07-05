@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html, body {
+    min-height: 100vh;
+    line-height: 1.5;
+    color: black; 
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin: 2rem;;
+}
+
+/* HEADER STYLES */
+header {
+    padding: 1rem;
+    /* loading color */
+    background-color: hsl(200, 100%, 62%);
+    background: 
+        url(images/desktop/image-header.jpg)
+        no-repeat center center;
+    background-size: cover;
+    height: 45vh;
+    color: white;
+    font-size: 1rem;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_wrapper img {
+    /* avoid image trying to stretch to fill space as that is default value */
+    align-self: center;
+}
+
+.menu a {
+    color: hsl(0, 0%, 100%)
+}
+
+.menu ul {
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    margin: 1rem;
+}
+
+#menu_contact-link {
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 0.8rem;
+    color: black;
+    margin-right: 0;
+}
+
+.arrow-down-icon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+}
+
+
+/* MAIN STYLES */
+.main_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+}
+
+.gallery img {
+    flex-shrink: 1;
+    min-width: 100px;
+}
+
+/* FOOTER STYLES */
+footer {
+    padding: 2rem;
+    background-color: hsl(168, 34%, 41%);
+    color: hsl(168, 34%, 41%);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer .logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_menu ul {
+    color:hsl(168, 34%, 41%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_menu a {
+    margin-right: 1rem;
+    color: hsl(168, 42%, 25%);
+}
+
+.footer_social-media-links ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_social-media-links a {
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+/* MOBILE STYLES */
+
+@media only screen and (max-width: 375px)  {
+    .gallery {
+        flex-wrap: wrap;
+    }
+}
