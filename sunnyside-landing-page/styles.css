@@ -131,6 +131,7 @@ footer ul {
     list-style: none;
 }
 
+/* TO-DO: make a center image utility class?? */
 footer .logo {
     margin-left: auto;
     margin-right: auto;
@@ -153,9 +154,14 @@ footer .logo {
     justify-content: center;
 }
 
-.footer_social-media-links a {
+.footer_social-media-links li {
+    margin: 0.5rem;
+}
+
+.footer_social-media-links img {
     padding: 0.5rem;
-    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 /* MOBILE STYLES */
@@ -164,4 +170,15 @@ footer .logo {
     .gallery {
         flex-wrap: wrap;
     }
+}
+
+/* UTILITY CLASSES */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
