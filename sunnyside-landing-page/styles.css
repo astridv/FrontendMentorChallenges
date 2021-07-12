@@ -170,7 +170,7 @@ header {
 }
 
 .client-testimonials {
-    padding: 3rem;
+    padding: 6rem 3rem;
     grid-column: 1 / 3;
     justify-self: center;
 }
@@ -178,10 +178,43 @@ header {
 .testimonials_wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.testimonials_image {
+.testimonial {
+    margin: 1rem;
+}
 
+.testimonial * {
+    padding: 0.6rem;
+}
+
+.testimonial_image {
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial p {
+    text-align: center;
+}
+
+.testimonial_review {
+    /* not sure about colour? */
+    color: hsl(232, 10%, 55%);
+    font-size: 0.8rem;
+}
+
+.client-name {
+    font-family: 'Fraunces', serif;
+    color: hsl(213, 9%, 39%);
+    padding-bottom: 0;
+}
+
+.client-title {
+    padding-top: 0.1rem;
+    font-size: 0.8rem;
 }
 
 .gallery {
