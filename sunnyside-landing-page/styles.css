@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
 
+/* CSS RESETS */
 *,
 *::before,
 *::after {
@@ -30,6 +31,7 @@ img {
       color: black;
   }
 
+/* UNIVERSAL STYLES */ 
 html, body {
     min-height: 100vh;
     line-height: 1.5;
@@ -58,6 +60,7 @@ h3 {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     letter-spacing: 0.1rem;
+    padding: 1rem;
 }
 
 h4 {
@@ -86,25 +89,34 @@ header {
         no-repeat center center;
     background-size: cover;
     height: 45vh;
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-size: 1rem;
 }
 
-.header_wrapper {
+.navbar {
     display: flex;
     justify-content: space-between;
 }
 
-.header_wrapper img {
+.navbar img {
     /* avoid image trying to stretch to fill space as that is default value */
     align-self: center;
 }
 
-.menu a {
-    color: hsl(0, 0%, 100%)
+.hamburger {
+    display: none;
 }
 
-.menu ul {
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.nav_menu {
     font-weight: 700;
     list-style: none;
     text-decoration: none;
@@ -113,11 +125,12 @@ header {
     justify-content: space-between;
 }
 
-.menu a {
+.nav_link {
+    color: hsl(0, 0%, 100%);
     margin: 1rem;
 }
 
-#menu_contact-link {
+.nav_contact-link {
     background-color:hsl(0, 0%, 100%);
     border-radius: 20px;
     padding: 0.8rem;
@@ -144,8 +157,10 @@ header {
 
 .grid_image {
     object-fit: cover;
+    object-position: 50% 50%;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
+    max-height: 450px;
 }
 
 .text-section {
@@ -159,13 +174,12 @@ header {
     margin-bottom: 1rem;
 }
 
-.text-section h2, p {
-    text-align: justify;
-}
-
 .text-section_link {
     text-transform: uppercase;
     font-family:  'Fraunces', serif;
+    padding: 0 0.1rem ;
+}
+
     font-size: 0.9rem;
 }
 
@@ -229,7 +243,7 @@ header {
 /* FOOTER STYLES */
 footer {
     padding: 2rem;
-    background-color: hsl(168, 34%, 41%);
+    background-color: hsl(168, 42%, 66%);
     color: hsl(168, 34%, 41%);
 }
 
@@ -273,6 +287,57 @@ footer .logo {
 /* SMALLER SCREENS AND MOBILE STYLES */
 /* using em for consistency across browsers, equals 375px*/
 @media only screen and (max-width: 41.875em)  {
+    .nav_menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        color: hsl(213, 9%, 39%);
+        background-color:hsl(0, 0%, 100%);
+        width: 90%;
+        transition: 0.3s;
+        text-align: center;
+        padding: 1.2rem;
+        z-index: 1;
+    }
+
+    /* triangle/arrow decoration on box */ 
+    .nav_menu::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 25px 20px 0;
+        border-color: transparent hsl(0, 0%, 100%) transparent transparent;
+        right: 0;
+        top: -20px;
+    }
+
+    .nav_menu.active {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav_item {
+       margin: 1rem 0;
+    }
+
+    .nav_link {
+        color: hsl(210, 4%, 67%);
+    }
+
+    .nav_contact-link {
+        background-color:hsl(51, 100%, 49%);
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
     .main_grid {
         display: block;
     }
@@ -280,6 +345,16 @@ footer .logo {
     .testimonials_wrapper {
         display: block;
     }
+
+    .gallery {
+        flex: 0 0 50px;
+    }
+
+    .text-on-img {
+        width: 90%;
+    }
+
+    
       
 }
 
