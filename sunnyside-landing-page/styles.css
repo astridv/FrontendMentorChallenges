@@ -180,7 +180,36 @@ header {
     padding: 0 0.1rem ;
 }
 
-    font-size: 0.9rem;
+.text-section-bg {
+   position: relative;
+   text-align: center;
+}
+
+.text-on-img {
+    width: 80%;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.graphic-design-text h3 {
+    color: hsl(167, 40%, 24%);
+}
+
+.photography-text h3 {
+    color: hsl(198, 62%, 26%);
+}
+
+.graphic-design-text p {
+    color: hsl(167, 40%, 40%);
+    font-size: 0.8rem;
+    max-width: 120ch;
+}
+
+.photography-text p {
+    color: hsl(198, 62%, 40%);
+    font-size: 0.8rem;
 }
 
 .client-testimonials {
@@ -367,4 +396,26 @@ footer .logo {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.text-underline_yellow {
+    background-image: linear-gradient(120deg, hsl(51, 80%, 78%) 0%, hsl(51, 80%, 78%) 0%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 100%;
+}
+
+.text-underline_pink {
+    background-image: linear-gradient(120deg, hsl(7, 89%, 76%) 0%, hsl(7, 89%, 76%) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 100%;
+}
+
+.text-underline_yellow:hover {
+    background-image: linear-gradient(120deg, hsl(51, 100%, 49%) 0%, hsl(51, 100%, 49%) 100%);
+}
+
+.text-underline_pink:hover {
+    background-image: linear-gradient(120deg, hsl(7, 99%, 70%) 0%, hsl(7, 99%, 70%) 100%);
 }
